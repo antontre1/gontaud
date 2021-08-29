@@ -1,0 +1,7 @@
+# ENV["SINATRA_ENV"] ||= "development" 
+# il est aussi dans le fichier environment.rb
+# In most of the labs in this section, this will be the first line of your Rakefile.
+# This means that if "SINATRA_ENV" doesn’t already have a value, its value will be set equal to "development".
+
+require_relative './config/environment'
+require 'sinatra/activerecord/rake'
