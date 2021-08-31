@@ -7,8 +7,14 @@ class UsersController < ApplicationController
   end
 
   post '/signup' do
-    binding.pry
     user = User.new(params)
+
+    if user.username.blank? || user.email.blank? || user.password.blank?
+        redirect '/signup'
+    else
+        user.save
+        redirect '/'
+    end
   end
 
 end
