@@ -1,4 +1,4 @@
-class UserController < ApplicationController
+class UsersController < ApplicationController
 
   # signup capability : a get and a post
 
@@ -6,8 +6,10 @@ class UserController < ApplicationController
     erb :'users/signup'
   end
 
-  get '/post' do
-  
+  post '/signup' do
+    binding.pry
+    user = User.new(params)
   end
 
 end
+
