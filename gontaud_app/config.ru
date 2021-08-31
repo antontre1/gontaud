@@ -1,5 +1,6 @@
 require './config/environment'
 
+
 # if ActiveRecord::Migrator.needs_migration?
 #   raise 'Migrations are pending. Run `rake db:migrate` to resolve the issue.'
 # end
@@ -21,4 +22,5 @@ require './config/environment'
 
 
 run ApplicationController
+use UserController
 # This loads Rake tasks from the sinatra-activerecord gem. A custom Rake task is defined on Lines 8-10 which starts a new Pry session.
