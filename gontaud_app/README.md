@@ -13,3 +13,11 @@ Note that in modular Sinatra applications you will need to first register the ex
 class YourApplication < Sinatra::Base
 register Sinatra::ActiveRecordExtension
 end
+
+Gestion de SESSION: (cf https://github.com/learn-co-curriculum/sinatra-mechanics-of-sessions-readme et https://rubydoc.info/gems/sinatra#using-sessions)
+pour la gestion des cookies, une sécurité est à ajouter avec la génération de nombre aléatoire.
+On utilise pour cela la gem securerandom. On ajoute dans le fichier app (application_controller):
+require 'sysrandom/securerandom'
+set :session_secret, ENV.fetch('SESSION_SECRET') { SecureRandom.hex(64) }
+
+ceci permet la génération dans le :session_secret d'un nombre aleatoire de 64hex (soit 512 bits).

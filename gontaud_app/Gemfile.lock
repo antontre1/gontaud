@@ -54,6 +54,7 @@ GEM
       sinatra (= 2.1.0)
       tilt (~> 2.0)
     sqlite3 (1.4.2)
+    sysrandom (1.0.5)
     thin (1.8.1)
       daemons (~> 1.0, >= 1.0.9)
       eventmachine (~> 1.0, >= 1.0.4)
@@ -76,6 +77,7 @@ DEPENDENCIES
   sinatra-activerecord
   sinatra-contrib
   sqlite3
+  sysrandom
   thin
 
 BUNDLED WITH
