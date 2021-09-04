@@ -15,7 +15,7 @@ register Sinatra::ActiveRecordExtension
 end
 
 Gestion de SESSION: (cf https://github.com/learn-co-curriculum/sinatra-mechanics-of-sessions-readme et https://rubydoc.info/gems/sinatra#using-sessions)
-pour la gestion des cookies, une sécurité est à ajouter avec la génération de nombre aléatoire.
+pour la gestion des cookies, une sécurité est à ajouter avec la génération de nombre aléatoire RNG (Random Numb Generator).
 On utilise pour cela la gem securerandom. On ajoute dans le fichier app (application_controller):
 require 'sysrandom/securerandom'
 set :session_secret, ENV.fetch('SESSION_SECRET') { SecureRandom.hex(64) }

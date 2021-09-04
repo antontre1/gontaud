@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@600&display=swap");
+
+.container {
+  display: flex; /* or inline-flex */
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+}
+
+.row {
+  border: 3px solid rgb(181, 188, 201);
+  margin: 3px;
+}
+
+.signinline {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+input[type="text"]:focus {
+  border: 3px solid #555;
+}
+
+.item {
+  border: 3px solid rgb(183, 207, 187);
+  margin: 3px;
+}
+
+#titre1 {
+  color: rgb(86, 86, 95);
+  font-family: "Josefin Slab", serif;
+  text-align: center;
+}
+
+#sousTitre {
+  color: rgb(106, 106, 110);
+  font-family: "Josefin Slab", serif;
+  text-align: center;
+}
+
+#imageDEntree {
+  opacity: 0.7;
+}
+
+#laForm {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  text-align: center;
+}
