@@ -7,8 +7,8 @@
 }
 
 .row {
-  border: 3px solid rgb(181, 188, 201);
-  margin: 3px;
+  /* border: 3px solid rgb(181, 188, 201);
+  margin: 3px; */
 }
 
 .signinline {
@@ -16,24 +16,31 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  flex-grow: 1;
+  /* flex-grow: 1; */
 }
 
 input[type="text"] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
+  width: 80%;
+  padding: 6px 6px;
+  margin: 4px 0;
   box-sizing: border-box;
+  outline-width: 0;
 }
 
 input[type="password"] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
+  width: 80%;
+  padding: 6px 6px;
+  margin: 4px 0;
   box-sizing: border-box;
 }
+
+input[type="password"]:focus {
+  border: 30px solid #555;
+  outline-width: 0;
+}
 input[type="text"]:focus {
-  border: 3px solid #555;
+  border: 10px solid #787987;
+  outline-width: 0;
 }
 
 .item {
@@ -67,4 +74,9 @@ input[type="text"]:focus {
 
 footer {
   text-align: center;
+}
+
+img {
+  width: 80vh;
+  max-width: 100%;
 }
