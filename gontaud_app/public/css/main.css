@@ -1,82 +1,50 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@600&display=swap");
-
-.container {
-  display: flex; /* or inline-flex */
-  flex-flow: column wrap;
-  justify-content: space-evenly;
-}
-
-.row {
-  /* border: 3px solid rgb(181, 188, 201);
-  margin: 3px; */
-}
-
-.signinline {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  /* flex-grow: 1; */
-}
-
-input[type="text"] {
-  width: 80%;
-  padding: 6px 6px;
-  margin: 4px 0;
-  box-sizing: border-box;
-  outline-width: 0;
-}
-
-input[type="password"] {
-  width: 80%;
-  padding: 6px 6px;
-  margin: 4px 0;
-  box-sizing: border-box;
-}
-
-input[type="password"]:focus {
-  border: 30px solid #555;
-  outline-width: 0;
-}
-input[type="text"]:focus {
-  border: 10px solid #787987;
-  outline-width: 0;
-}
-
-.item {
-  border: 3px solid rgb(183, 207, 187);
-  margin: 3px;
-}
-
-#titre1 {
-  color: rgb(86, 86, 95);
-  font-family: "Josefin Slab", serif;
-  text-align: center;
-}
-
-#sousTitre {
-  color: rgb(106, 106, 110);
-  font-family: "Josefin Slab", serif;
-  text-align: center;
-}
-
-#imageDEntree {
-  opacity: 0.7;
-}
-
-#laForm {
+.containerAll {
   display: flex;
   flex-direction: column;
-  align-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  text-align: center;
+}
+
+.signInLine {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  padding: 0%;
+  margin: 0;
+}
+
+.pictMain {
+  width: 100%;
+  max-width: 80vh;
+  height: auto;
+  flex-grow: 1;
+  opacity: 0.65;
+  margin: 4px;
+  border-radius: 4px;
+}
+
+.laForm {
+  display: flex;
+  flex-flow: row wrap;
+  border: rgb(192, 173, 109) solid 2px;
+  flex-grow: 1;
+  max-width: 80vh;
   justify-content: center;
   align-items: center;
+  margin: 4px;
+  border-radius: 4px;
+  background-image: url(/images/jardin_cyclamens.jpeg);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  opacity: 1;
 }
 
 footer {
   text-align: center;
-}
-
-img {
-  width: 80vh;
-  max-width: 100%;
 }
