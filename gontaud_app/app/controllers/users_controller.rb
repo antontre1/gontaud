@@ -9,13 +9,42 @@ class UsersController < ApplicationController
   post '/signup' do
     user = User.new(params)
 
-    if user.username.blank? || user.email.blank? || user.password.blank?
+    if user.username.blank? || user.email.blank? || user.password.blank? || user.fname.blank? || user.lname.blank? || user.ville.blank? || User.find_by_username(params[:username]) || User.find_by_email(params[:email])
+      # binding.pry
         redirect '/signup'
     else
         user.save
-        redirect '/'
+        session[:user_id] = user.id #very important part of login user with its session id
+        redirect '/accueil'
     end
   end
+
+  get '/login' do
+    erb :'/index'
+  end
+
+  post '/login' do
+    user = User.find_by_username(params[:username])
+    if user && user.authenticate(params[:password])
+      #login user
+      session[:user_id] = user.id
+      #redirect
+      redirect '/accueil'
+    else
+      flash[:error]= "Invalid Login"
+      redirect '/login'
+      #use flash
+    end
+  end
+
+get '/accueil' do
+  erb :'/tronc/accueil'
+end
+
+get '/logout' do
+  session.clear
+  redirect '/login'
+end
 
 end
 

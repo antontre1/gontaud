@@ -1,18 +1,26 @@
 <div class="containerAll">
     <div class="header">
         <h1 id="titre1">Gontaud de Nogaret</h1>
-        <h5 id="sousTitre">"Le Jardin"</h5>
+        <h3 id="sousTitre">"Le Jardin"</h3>
     </div>
     <div class="signInLine row">
         <img src="/images/gontaudpeinture.jpg"  class="pictMain" width="300" height="200" id="imageDEntree" alt="Des Cyclamens du jardin de Gontaud">
         <div class="laForm">
-            <form action="/signin" class="question" method="POST">
-                <span class="textJosefin">Enter Username: </span><input type="text" name="username"><br>
-                <span class="textJosefin">Enter your password:</span> <input type="password" name="password"><br>
-                <input type="submit" value="Signin"><br>
+           
+            <form action="/login" class="question" method="POST">
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" placeholder="Enter Username" required><br>
+                        <%= if flash[:error] 
+                            '<span style=" color: #925252; font-family: "Urbanist", sans-serif; padding: 10px; text-align: center;"><strong>' + flash[:error] + '</strong></span>' 
+                            end %><br> 
+                    <label for="password">Password</label> <input type="password" placeholder="Enter Password" name="password" required><br>
+                    <button type="submit" class="btn" value="login">Login</button><br>
             </form>
+            <div class="signup">
+                <a href="/signup">signup</a>
+            </div>            
         </div>
-    </div>   
+    </div>      
 </div>
 <br>
 

@@ -53,6 +53,8 @@ GEM
       rack-protection (= 2.1.0)
       sinatra (= 2.1.0)
       tilt (~> 2.0)
+    sinatra-flash (0.3.0)
+      sinatra (>= 1.0.0)
     sqlite3 (1.4.2)
     sysrandom (1.0.5)
     thin (1.8.1)
@@ -76,6 +78,7 @@ DEPENDENCIES
   require_all
   sinatra-activerecord
   sinatra-contrib
+  sinatra-flash
   sqlite3
   sysrandom
   thin

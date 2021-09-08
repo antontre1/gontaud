@@ -1,17 +1,19 @@
 <!DOCTYPE html>
   <head>
     <meta charset="utf-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1"> 
+<%# This gives the browser instructions on how to control the page's dimensions and scaling.
+The width=device-width part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).
+The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser. %>
     <title>GontaudApp</title>
     <link rel="stylesheet" type="text/css" href="/css/main.css" />
   </head>
   <body>
+
     <div class="wrapper">
         <%= yield %>
-      <footer>
-        <div style="background-color: rgba(0, 0, 0, 0.05);   color: rgb(106, 106, 110);
-    font-family: 'Josefin Slab', serif;">
-          © 2021 GontaudApp
-        </div>
+      <footer style="background-color: rgba(0, 0, 0, 0.05);">
+        <div style=" color: rgb(106, 106, 110);  font-family: 'Josefin Slab', serif; padding: 10px;">© 2021 GontaudApp</div>
       </footer>
     </div>
   </body>

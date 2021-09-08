@@ -9,12 +9,18 @@ class ApplicationController < Sinatra::Base
     enable :sessions
     set :session_secret, ENV.fetch('SESSION_SECRET') { SecureRandom.hex(64) }
     # binding.pry
+    register Sinatra::Flash
   end
 
 
   get '/' do
     erb :index
   end
+
+  get '/signup' do
+    erb :"users/signup"
+  end
+
 
 
 end

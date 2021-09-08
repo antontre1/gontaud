@@ -1,3 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Urbanist&display=swap");
+
+.wrapper {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+}
+
 .containerAll {
   display: flex;
   flex-direction: column;
@@ -8,14 +17,21 @@
 
 .header {
   text-align: center;
+  color: #5f5f5f;
+  font-family: "Josefin Slab", serif;
+}
+
+.header h1 {
+  font-size: 5vh;
 }
 
 .signInLine {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
-  padding: 0%;
+  padding: 0;
   margin: 0;
+  width: 100%;
 }
 
 .pictMain {
@@ -23,7 +39,7 @@
   max-width: 80vh;
   height: auto;
   flex-grow: 1;
-  opacity: 0.65;
+  opacity: 0.8;
   margin: 4px;
   border-radius: 4px;
 }
@@ -33,18 +49,104 @@
   flex-flow: row wrap;
   border: rgb(192, 173, 109) solid 2px;
   flex-grow: 1;
+  width: 100%;
   max-width: 80vh;
   justify-content: center;
   align-items: center;
   margin: 4px;
   border-radius: 4px;
-  background-image: url(/images/jardin_cyclamens.jpeg);
+  background-image: linear-gradient(
+      to bottom,
+      rgba(214, 205, 205, 0.6),
+      rgba(251, 251, 253, 0.8)
+    ),
+    url(/images/jardin_cyclamens.jpeg);
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.question {
+  background-color: rgba(255, 255, 255, 1); /* Black w/opacity/see-through */
+  margin: 10px;
+  padding: 8px;
+  border-radius: 4px;
+  min-width: 40vh;
+  min-height: 20vh;
+}
+/* Full-width input fields */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px 0px 10px 0;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  color: #5f5f5f;
+  font-size: 3vh;
+  /* font-family: "Urbanist", sans-serif; */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  background-color: rgb(240, 235, 235);
+  outline: none;
+}
+
+label {
+  color: #5f5f5f;
+  font-family: "Urbanist", sans-serif;
+  font-size: 2vh;
+}
+/* Set a style for the submit button */
+.btn {
+  background-color: #ecbc96;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  font-family: "Urbanist", sans-serif;
+  font-size: 3vh;
+}
+
+.btn:hover {
   opacity: 1;
 }
 
 footer {
+  display: flex;
   text-align: center;
+  height: 5vh;
+  justify-content: center;
+}
+
+.signup {
+  color: rgb(161, 146, 161);
+  width: 100%;
+  text-align: center;
+}
+
+a {
+  color: #5f5f5f;
+  text-decoration: none;
+  font-family: "Urbanist", sans-serif;
+}
+
+.flash {
+  color: #925252;
+  font-family: "Urbanist", sans-serif;
+}
+
+@media (max-width: 992px) {
+  .signInLine :nth-child(1) {
+    order: 2;
+  }
+  .signInLine :nth-child(2) {
+    order: 1;
+  }
+  .laForm :nth-child(2) {
+    order: 2;
+  }
 }
