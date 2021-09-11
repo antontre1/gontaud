@@ -14,7 +14,7 @@ class UsersController < ApplicationController
         redirect '/signup'
     else
         user.save
-        session[:user_id] = user.id #very important part of login user with its session id
+        session[:user_id] = user.id # very important part of login user with its session id
         redirect '/accueil'
     end
   end
@@ -47,4 +47,3 @@ get '/logout' do
 end
 
 end
-

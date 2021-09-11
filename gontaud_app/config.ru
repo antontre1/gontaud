@@ -23,4 +23,5 @@ require './config/environment'
 
 run ApplicationController
 use UsersController
+use ImagesController
 # This loads Rake tasks from the sinatra-activerecord gem. A custom Rake task is defined on Lines 8-10 which starts a new Pry session.

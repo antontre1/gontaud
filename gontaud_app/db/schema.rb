@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_08_101252) do
+ActiveRecord::Schema.define(version: 2021_09_11_153727) do
 
   create_table "photos", force: :cascade do |t|
     t.string "pname"
-    t.binary "picture"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer "user_id"
+    t.string "image"
     t.index ["user_id"], name: "index_photos_on_user_id"
   end
 
