@@ -8,9 +8,8 @@ class UsersController < ApplicationController
 
   post '/signup' do
     user = User.new(params)
+    if !!User.find_by_email(params[:email]) ||  !!User.find_by_username(params[:username]) || user.username.blank? || user.email.blank? || user.password.blank? || user.fname.blank? || user.lname.blank? || user.ville.blank?
 
-    if user.username.blank? || user.email.blank? || user.password.blank? || user.fname.blank? || user.lname.blank? || user.ville.blank? || User.find_by_username(params[:username]) || User.find_by_email(params[:email])
-      # binding.pry
         redirect '/signup'
     else
         user.save

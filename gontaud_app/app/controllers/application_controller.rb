@@ -1,7 +1,8 @@
 require './config/environment'
 require 'sysrandom/securerandom'
-require "carrierwave"
 require "carrierwave/orm/activerecord"
+require "carrierwave"
+
 
 #Configure Carrierwave
 CarrierWave.configure do |config|
@@ -11,7 +12,7 @@ end
 
 class ApplicationController < Sinatra::Base
   register Sinatra::ActiveRecordExtension
-  
+
   configure do
     set :public_folder, 'public'
     set :views, 'app/views'
