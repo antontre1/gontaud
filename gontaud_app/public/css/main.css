@@ -25,6 +25,15 @@
   font-size: 5vh;
 }
 
+.titreGris {
+  background-color: rgba(0, 0, 0, 0.05);
+  text-align: center;
+  color: rgb(106, 106, 110);
+  font-family: 'Josefin Slab', serif;
+  font-size: 3vh;
+  padding: 10px;
+}
+
 .signInLine {
   display: flex;
   flex-flow: row wrap;

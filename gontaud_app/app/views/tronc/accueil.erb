@@ -1,7 +1,33 @@
-<h1 class="titre">Bienvenu !</h1>
-<div class="containerDImages">
-  <% @photos.each do |p| %>
-    <img src="<%= p.image.url %>" class="monimage" width="200px" alt="monimage">
-  <% end %>
+<link rel="stylesheet" type="text/css" href="/css/modules/accueil.css" />
+<div class="containerAll">
+    <div class="header">
+        <h1 id="titre1">Bienvenu à Gontaud de Nogaret</h1>
+        <h2 id="sousTitre">"Le Jardin"</h2>
+    </div>
+    <div class="rowvisiter titreGris">
+        <div >Visiter en ligne</div>
+    </div>
+    <ul class="lesLieux">
+      <li class="imageLieu laMaison"><a href="/laMaison"><img src="images/laMaison.png" alt="laMaison"></a></li>
+      <li class="imageLieu lePigeonnier"><a href="/lePigeonnier"><img src="images/lePigeonnier.png" alt="lePigeonnier"></a></li>
+      <li class="imageLieu leChais"><a href="/leChais"><img src="images/leChais.png" alt="leChais"></a></li>
+      <li class="imageLieu laSerre"><a href="/laSerre"><img src="images/laSerre.png" alt="laSerre"></a></li>
+      <li class="imageLieu leGarageEtAtliers"><a href="/leGarageEtAteliers"><img src="images/leGarageEtAteliers.png" alt="leGarageEtAteliers"></a></li>
+      <li class="imageLieu laSalleDeJeux"><a href="/laSalleDeJeux"><img src="images/laSalleDeJeux.png" alt="laSalleDeJeux"></a></li>
+    </ul>
+    <div class="rowVenirTitre titreGris">
+        <div >Venir à Gontaud - "le jardin"</div>
+    </div>
+    <div class="rowVenir">Qui vient?<br>Je réserve<br></div>
+    <div class="rowVenir titreGris">
+        <div >Les Fiches Comment Faire ?</div>
+    </div>
+    <ul class="commentFaire">
+      <li class="ficheCommentFaire1">La piscine</li>
+      <li class="ficheCommentFaire2">Le linge</li>
+      <li class="ficheCommentFaire3">L'arrosage</li>
+      <li class="ficheCommentFaire4">Les outils</li>
+      <li class="ficheCommentFaire5">L'eau</li>
+    </ul>
 </div>
-<a href="/recordimage" class="ajoutimage">Ajouter Image</a>
+<br>
