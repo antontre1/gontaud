@@ -139,6 +139,19 @@ a {
   font-family: "Urbanist", sans-serif;
 }
 
+.containerDImages {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-self: center;
+}
+
+.monimage {
+  vertical-align: bottom;
+  object-fit:cover;
+}
+
+
 @media (max-width: 1260px) {
   .signInLine :nth-child(1) {
     order: 2;

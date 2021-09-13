@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_11_153727) do
+ActiveRecord::Schema.define(version: 2021_09_13_120709) do
 
   create_table "photos", force: :cascade do |t|
     t.string "pname"
@@ -18,6 +18,9 @@ ActiveRecord::Schema.define(version: 2021_09_11_153727) do
     t.datetime "updated_at"
     t.integer "user_id"
     t.string "image"
+    t.string "batiment"
+    t.string "piece"
+    t.string "typephoto"
     t.index ["user_id"], name: "index_photos_on_user_id"
   end
 
@@ -30,6 +33,7 @@ ActiveRecord::Schema.define(version: 2021_09_11_153727) do
     t.string "password_digest"
     t.string "ville"
     t.string "username"
+    t.string "validation"
   end
 
 end

@@ -1,13 +1,5 @@
 require './config/environment'
 require 'sysrandom/securerandom'
-require "carrierwave/orm/activerecord"
-require "carrierwave"
-
-
-#Configure Carrierwave
-CarrierWave.configure do |config|
-  config.root = File.dirname(__FILE__) + "/public"
-end
 
 
 class ApplicationController < Sinatra::Base
@@ -34,6 +26,14 @@ class ApplicationController < Sinatra::Base
     erb :"users/signup"
   end
 
-
+helpers do
+  def current_user  #return the logged user
+    @current_user ||= User.find_by_id(session[:user_id]) #memorization
+  end
+  #check if a user is logged in
+  def logged_in?
+    !!session[:user_id]
+  end
+end
 
 end
