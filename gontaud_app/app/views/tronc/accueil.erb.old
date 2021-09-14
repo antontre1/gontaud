@@ -1,7 +1,0 @@
-<h1 class="titre">Bienvenu !</h1>
-<div class="containerDImages">
-  <% @photos.each do |p| %>
-    <img src="<%= p.image.url %>" class="monimage" width="200px" alt="monimage">
-  <% end %>
-</div>
-<a href="/recordimage" class="ajoutimage">Ajouter Image</a>

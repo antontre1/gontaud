@@ -1,0 +1,24 @@
+
+  <head>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="datepicker-fr.js"></script>
+  <script>
+
+$(function() {
+  $( ".datepicker" ).datepicker({ dateFormat: "dd,mm,paryy" });
+});
+  </script>
+</head>
+
+<h1>Qui souhaite venir et Quand ?</h1>
+
+<form action:"/jeviens" method="POST">
+    De qui s'agit-il ? <input type="text" name="visitor"><br>
+    A partir de quelle date ? <input type="text" name="start_date" class="datepicker"><br>
+    Et jusqu'à quelle date inclue ? <input type="text" name="end_date" class="datepicker"><br>
+    Un commentaire à faire partager pour votre venue ? <input type="text" name="comments"><br>
+    <input type="submit" value="SignUp"><br>
+</form>
