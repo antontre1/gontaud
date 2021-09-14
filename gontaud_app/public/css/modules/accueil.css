@@ -1,28 +1,45 @@
+/* *, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+} */
+
+
 li {
   list-style-type:none;
+}
+.sousTitre {
+    margin-top: 30px;
+    margin-bottom: 30px;
+
 }
 
 .lesLieux {
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
+  justify-content:space-evenly;
   margin: 5px;
   padding:0px;
   list-style-type: none;
 }
 
-.imageLieu {
+.divImageLieu {
   max-width: 40%;
   vertical-align: bottom;
   object-fit:contain;
     flex-grow: 1;
-
 }
 
 .vignette {
-  min-width: 100%;
-   max-height: 100%;
-  min-width: 100%;
-  object-fit: cover;
-  vertical-align: bottom;
+max-width:100%;
+}
+
+#divQuiVient {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+#imgQuiVient, #imgJeViens {
+  width: 400px;
+  max-width: 100%;
 }
