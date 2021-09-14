@@ -18,6 +18,5 @@ gem 'bcrypt'
 gem 'sysrandom'
 gem 'sinatra-flash'
 gem 'carrierwave'
-gem 'chartkick'
 
 #gem 'rack-flash3'

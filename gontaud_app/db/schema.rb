@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_13_120709) do
+ActiveRecord::Schema.define(version: 2021_09_14_111444) do
+
+  create_table "periodes", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "visitor"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["user_id"], name: "index_periodes_on_user_id"
+  end
 
   create_table "photos", force: :cascade do |t|
     t.string "pname"
